@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainItemsBgColor"
+    android:orientation="vertical"
+    tools:context="com.merise.net.heart.MainActivity">
+
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_20">
+
+        <ImageView
+            android:id="@+id/iv_head_image"
+            android:layout_width="@dimen/length_200px"
+            android:layout_height="@dimen/length_200px"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic" />
+
+    </LinearLayout>
+
+
+    <!--输入账号密码模块-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_100px"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:id="@+id/tv_login_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="@color/deviceNameTextColor"
+                android:textSize="@dimen/text_size_26" />
+
+            <ImageView
+                android:id="@+id/pub_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/tv_login_account"
+                android:background="@color/gray"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/line" />
+
+            <com.merise.net.heart.view.ClearEditView
+                android:id="@+id/usernameEt"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toRightOf="@+id/pub_line"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_account"
+                android:singleLine="true"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/text_size_26" />
+
+            <include
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_100px"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:id="@+id/tv_login_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/password"
+                android:textColor="@color/deviceNameTextColor"
+                android:textSize="@dimen/text_size_26" />
+
+            <ImageView
+                android:id="@+id/pass_pub_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/tv_login_password"
+                android:background="@color/gray"
+                android:src="@drawable/line" />
+
+            <EditText
+                android:id="@+id/passwordEt"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toRightOf="@+id/pass_pub_line"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_password"
+                android:inputType="textPassword"
+                android:lines="1"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/text_size_26" />
+
+            <CheckBox
+                android:id="@+id/cb_passwordVisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/passwordEt"
+                android:layout_alignRight="@+id/passwordEt"
+                android:layout_marginRight="@dimen/margin_5"
+                android:button="@drawable/check_password_selector"
+                android:checked="false" />
+
+            <include
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_login_forgetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="@dimen/margin_30px"
+            android:layout_marginTop="@dimen/margin_30px"
+            android:text="@string/forget_password"
+            android:textSize="@dimen/text_size_26" />
+
+
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_login_forgetPassword"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@drawable/login_selector"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_26" />
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:onClick="clear"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="清理" />-->
+</LinearLayout>

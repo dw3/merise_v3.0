@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/set_username_root"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20">
+
+        <RelativeLayout
+            android:id="@+id/new_username"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_100px"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/username_item"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/username"
+                android:textColor="@color/deviceNameTextColor"
+                android:textSize="@dimen/text_size_26" />
+
+
+            <ImageView
+                android:id="@+id/pub_line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/username_item"
+                android:src="@drawable/line" />
+
+            <com.merise.net.heart.view.ClearEditView
+                android:id="@+id/ed_new_username"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@+id/pub_line2"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_new_username"
+                android:lines="1"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/text_size_26" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/new_username"
+            android:layout_below="@id/new_username"
+            android:text="@string/perfect_username_hint"
+            android:textColor="@color/red" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_password"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30">
+
+        <Button
+            android:id="@+id/change_username_finish"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wide_btn_bg_selector"
+            android:text="@string/finish"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

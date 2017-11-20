@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.merise.net.heart.MainActivity">
+
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <!--输入账号密码模块-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_100px"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:id="@+id/erengyRemarkTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name"
+                android:gravity="center"
+                android:text="@string/emergency_name"
+                android:textColor="@color/deviceNameTextColor"
+                android:textSize="@dimen/text_size_26" />
+
+            <ImageView
+                android:id="@+id/pub_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/erengyRemarkTv"
+                android:src="@drawable/line" />
+
+            <com.merise.net.heart.view.ClearEditView
+                android:id="@+id/emergencyCallNum"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@+id/erengyRemarkTv"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toRightOf="@+id/pub_line"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_emergency_num"
+                android:singleLine="true"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/home_device_name_text_size" />
+
+            <include
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_100px"
+            android:paddingLeft="@dimen/padding_10"
+            android:paddingRight="@dimen/padding_10">
+
+            <TextView
+                android:id="@+id/emergencyCall_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="备        注"
+                android:textColor="@color/deviceNameTextColor"
+                android:textSize="@dimen/text_size_26" />
+
+            <ImageView
+                android:id="@+id/pass_pub_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/emergencyCall_remark"
+                android:src="@drawable/line" />
+
+            <com.merise.net.heart.view.ClearEditView
+                android:id="@+id/emergencyCall_remark_et"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toRightOf="@+id/pass_pub_line"
+                android:background="@android:color/transparent"
+                android:hint="@string/hint_emergency_remark"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/home_device_name_text_size"/>
+
+            <include
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/finish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/login_selector"
+                android:text="@string/finish"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_26"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

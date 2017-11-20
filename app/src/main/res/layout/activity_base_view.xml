@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/mainItemsBgColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <RelativeLayout
+        android:paddingLeft="@dimen/padding_10"
+        android:paddingRight="@dimen/padding_10"
+        android:id="@+id/remarkRl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:layout_below="@id/topTitle"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/nickName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/remark"
+            android:textColor="@color/deviceNameTextColor"
+            android:textSize="@dimen/home_device_name_text_size" />
+
+        <ImageView
+            android:id="@+id/pub_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_toRightOf="@id/nickName"
+            android:src="@drawable/line" />
+
+        <com.merise.net.heart.view.ClearEditView
+            android:id="@+id/remarkEd"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_toRightOf="@+id/pub_line"
+            android:background="@android:color/transparent"
+            android:hint="@string/input_remark"
+            android:singleLine="true"
+            android:textColorHint="@color/hintColor"
+            android:textSize="@dimen/home_device_name_text_size"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remarkRl"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/finish"
+            android:layout_margin="@dimen/margin_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wide_btn_bg_selector"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_sp_20" />
+    </LinearLayout>
+
+</RelativeLayout>

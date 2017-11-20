@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_expand_item_height">
+
+    <RelativeLayout
+        android:id="@+id/rootRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_expand_item_height">
+
+        <TextView
+            android:id="@+id/deviceName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/deivce_name_padding_left"
+            android:text="name"
+            android:textColor="@color/deviceNameTextColor"
+            android:textSize="@dimen/home_device_name_text_size" />
+
+        <TextView
+            android:id="@+id/deviceType"
+            android:layout_toRightOf="@id/deviceName"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="(type)"
+            android:textSize="@dimen/home_device_name_text_size"
+            android:textColor="@color/dodgerblue"
+            />
+        <ImageView
+            android:id="@+id/doorStatus"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:paddingRight="@dimen/door_status_padding_right"
+            android:layout_height="match_parent"
+            android:src="@drawable/close_door"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,2 @@
+//include ':app',':common_library',':xrecyclerview'
+include ':app',':common_library'

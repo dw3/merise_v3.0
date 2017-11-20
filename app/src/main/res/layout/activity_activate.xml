@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:background="@color/mainItemsBgColor"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/SNRL"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:layout_below="@id/topTitle"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:id="@+id/SNTv"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/activate_code"
+            android:textColor="@color/deviceNameTextColor"
+            android:textSize="@dimen/home_device_name_text_size" />
+
+        <ImageView
+            android:id="@+id/SN_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_toRightOf="@id/SNTv"
+            android:src="@drawable/line" />
+
+        <com.merise.net.heart.view.ClearEditView
+            android:id="@+id/SNEd"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_toRightOf="@+id/SN_line"
+            android:background="@android:color/transparent"
+            android:hint="@string/input_activate_code"
+            android:singleLine="true"
+            android:textColorHint="@color/hintColor"
+            android:textSize="@dimen/home_device_name_text_size"></com.merise.net.heart.view.ClearEditView>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/line"
+        layout="@layout/layout_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/SNRL"></include>
+
+    <TextView
+        android:id="@+id/SNTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/activation_code_hint"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_26" />
+
+    <RelativeLayout
+        android:id="@+id/remarkRl"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:layout_below="@id/SNTip"
+        android:layout_marginTop="@dimen/margin_10"
+        android:background="@color/white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_20"
+        android:paddingRight="@dimen/padding_20">
+
+        <TextView
+            android:id="@+id/remarkTv"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/remark"
+            android:textColor="@color/deviceNameTextColor"
+            android:textSize="@dimen/home_device_name_text_size" />
+
+        <ImageView
+            android:id="@+id/username_line"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_toRightOf="@id/remarkTv"
+            android:src="@drawable/line" />
+
+        <com.merise.net.heart.view.ClearEditView
+            android:id="@+id/remarkEd"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_toRightOf="@+id/username_line"
+            android:background="@android:color/transparent"
+            android:hint="@string/input_remark"
+            android:singleLine="true"
+            android:textColorHint="@color/hintColor"
+            android:textSize="@dimen/home_device_name_text_size"></com.merise.net.heart.view.ClearEditView>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/line1"
+        layout="@layout/layout_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/remarkRl"></include>
+
+    <TextView
+        android:id="@+id/remarkTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_10"
+        android:text="@string/update_door_hint"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_26" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/remarkTip"
+        android:layout_marginTop="@dimen/margin_40"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/finish"
+            android:layout_margin="@dimen/margin_10"
+            android:background="@drawable/wide_btn_bg_selector"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_sp_20" />
+    </LinearLayout>
+</RelativeLayout>

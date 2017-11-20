@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topTitle">
+
+
+        <com.merise.net.heart.view.CustomViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/indexTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/viewpager_selector"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/rootLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#80000000"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_20">
+            <!---->
+            <RelativeLayout
+                android:id="@+id/contentRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/rlTile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_26" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/detailRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlTile"
+                    android:layout_marginTop="@dimen/margin_5">
+
+                    <EditText
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:editable="false"
+                        android:ellipsize="none"
+                        android:maxLines="5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_26" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/destinationDateRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detailRl">
+
+                    <TextView
+                        android:id="@+id/destinationDateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_26" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/feedbackRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/feedbackContentRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_5">
+
+                    <EditText
+                        android:id="@+id/feedbackContentTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:editable="false"
+                        android:ellipsize="none"
+                        android:maxLines="5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_26" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/feedbackContentDateRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/feedbackContentRL">
+
+                    <TextView
+                        android:id="@+id/feedbackContentDateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:gravity="right"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_26" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@id/feedbackContentDateRL"
+                    android:background="@color/white"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/evaluateRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/evaluateTitleRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/evaluateTitleTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_26" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/evaluateContentRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/evaluateTitleRl"
+                    android:layout_marginTop="@dimen/margin_5">
+
+                    <EditText
+                        android:id="@+id/evaluateContentTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:editable="false"
+                        android:ellipsize="none"
+                        android:maxLines="5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_26" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/evaluateLevelRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/evaluateContentRL"
+                    android:padding="@dimen/padding_10">
+
+                    <RatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/foodRatingBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_5"
+                        android:layout_toLeftOf="@+id/evaluateDateTV"
+                        android:isIndicator="true"
+                        android:stepSize="1" />
+
+                    <TextView
+                        android:id="@+id/evaluateDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_26" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>

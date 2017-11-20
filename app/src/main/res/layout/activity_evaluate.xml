@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <EditText
+        android:id="@+id/evaluateET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topTitle"
+        android:background="@null"
+        android:padding="@dimen/padding_20" />
+
+    <RelativeLayout
+        android:id="@+id/evaluateStar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/evaluateET"
+        android:padding="@dimen/padding_20">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="星级评定:"
+            android:textSize="@dimen/text_size_26" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/foodRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/titleTV"
+            android:rating="5"
+            android:stepSize="1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/evaluateStar"
+        android:padding="@dimen/padding_20">
+
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:background="@drawable/wide_btn_bg_selector"
+            android:text="@string/finish"
+            android:textColor="@drawable/top_text_click_bg_selector" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/prefect_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <LinearLayout
+        android:id="@+id/is_getstrue_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/change_username"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:background="@drawable/item_click_bg_selector"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/show_username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_20"
+                android:clickable="true"
+                android:drawablePadding="@dimen/padding_10"
+                android:drawableRight="@drawable/next"
+                android:gravity="center_vertical"
+                android:text="我是网大王" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center_vertical"
+                android:text="@string/username"
+                android:textColor="@color/deviceNameTextColor" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D3D3D3" />
+
+        <RelativeLayout
+            android:id="@+id/e_mail_change"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:layout_below="@id/change_username"
+            android:background="@drawable/item_click_bg_selector"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:gravity="center_vertical"
+                android:text="@string/modify_email"
+                android:textColor="@color/deviceNameTextColor" />
+
+            <TextView
+                android:id="@+id/show_email"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:clickable="true"
+                android:drawablePadding="@dimen/padding_10"
+                android:drawableRight="@drawable/next"
+                android:gravity="center_vertical"
+                android:text="1289654378@qq.com" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

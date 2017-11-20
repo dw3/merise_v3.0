@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/root"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/topTitle"
+            layout="@layout/top_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/et_context"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/topTitle"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="@string/say_sth"
+            android:padding="@dimen/padding_10" />
+
+        <com.merise.net.heart.view.CustomGridView
+            android:id="@+id/gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_context"
+            android:horizontalSpacing="@dimen/space_size"
+            android:paddingLeft="@dimen/margin_20px"
+            android:paddingRight="@dimen/margin_20px"
+            android:verticalSpacing="@dimen/space_size"/>
+        <include
+            android:id="@+id/line"
+            layout="@layout/layout_horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/gridView"
+            android:layout_marginTop="@dimen/margin_10"></include>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:background="@color/mainItemsBgColor"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/trends"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/issue_group_selector"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:text="@string/send_trends"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <RadioButton
+                android:id="@+id/activityBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:button="@null"
+                android:drawableLeft="@drawable/issue_group_selector"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:text="@string/send_activity"
+                android:textColor="@drawable/textview_click_bg_selector" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/activityItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radioGroup"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/chooseDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:background="@drawable/item_click_bg_selector"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:gravity="center_vertical"
+                    android:text="@string/please_choose_date"
+                    android:textColor="@color/deviceNameTextColor" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:clickable="true"
+                    android:drawablePadding="@dimen/padding_10"
+                    android:drawableRight="@drawable/next"
+                    android:gravity="center_vertical"
+                    android:textColor="@drawable/textview_click_bg_selector" />
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/line"
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/chooseDate"></include>
+
+            <RelativeLayout
+                android:id="@+id/chooseAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:layout_below="@id/line"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_20"
+                android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/address"
+                    android:textColor="@color/deviceNameTextColor" />
+
+                <ImageView
+                    android:id="@+id/pub_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_toRightOf="@id/address"
+                    android:src="@drawable/line" />
+
+                <com.merise.net.heart.view.ClearEditView
+                    android:id="@+id/addressEt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toRightOf="@+id/pub_line"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/input_address"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"></com.merise.net.heart.view.ClearEditView>
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/line1"
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/chooseAddress"></include>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/canScanStaus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:layout_below="@id/activityItem"
+            android:background="@drawable/item_click_bg_selector"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:gravity="center_vertical"
+                android:text="@string/who_can_scan"
+                android:textColor="@color/deviceNameTextColor" />
+
+            <TextView
+                android:id="@+id/canScanTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_20"
+                android:clickable="true"
+                android:drawablePadding="@dimen/padding_10"
+                android:drawableRight="@drawable/next"
+                android:gravity="center_vertical"
+                android:textColor="@drawable/textview_click_bg_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/canScanStaus"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <Button
+                android:id="@+id/finish"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wide_btn_bg_selector"
+                android:text="@string/finish"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

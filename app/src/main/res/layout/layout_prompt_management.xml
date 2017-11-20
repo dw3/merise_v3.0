@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainItemsBgColor"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!--Line 1-->
+    <LinearLayout
+        android:id="@+id/open_tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:background="@drawable/item_click_bg_selector"
+            android:minHeight="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/opendoor_hint"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <CheckBox
+                android:id="@+id/open_door_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/off_btn"
+                android:button="@android:color/transparent"
+                android:clickable="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <!-- Line 2 -->
+    <LinearLayout
+        android:id="@+id/doorbering_tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:background="@drawable/item_click_bg_selector"
+            android:minHeight="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/doorbell_hint"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <CheckBox
+                android:id="@+id/doorbell_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/off_btn"
+                android:button="@android:color/transparent"
+                android:clickable="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <!--line 3-->
+    <LinearLayout
+        android:id="@+id/battery_tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:background="@drawable/item_click_bg_selector"
+            android:minHeight="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/low_power_tips"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <CheckBox
+                android:id="@+id/battery_warn_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/off_btn"
+                android:button="@android:color/transparent"
+                android:clickable="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <!--line 4-->
+    <LinearLayout
+        android:id="@+id/magnetometer_tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:background="@drawable/item_click_bg_selector"
+            android:minHeight="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/door_alarm"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <CheckBox
+                android:id="@+id/magnetometer_warn_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/off_btn"
+                android:button="@android:color/transparent"
+                android:clickable="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        layout="@layout/layout_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <!--line 5-->
+    <LinearLayout
+        android:id="@+id/dismantle_tip_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:background="@drawable/item_click_bg_selector"
+            android:minHeight="45dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="@string/disassembly_alarm"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <CheckBox
+                android:id="@+id/dismantle_warn_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/off_btn"
+                android:button="@android:color/transparent"
+                android:clickable="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/mainRl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/headImg"
+            android:layout_width="@dimen/height_50"
+            android:layout_height="@dimen/height_50"
+            android:layout_marginBottom="@dimen/margin_25px"
+            android:layout_marginLeft="@dimen/margin_30px"
+            android:layout_marginTop="@dimen/margin_20px"
+            android:src="@drawable/ic" />
+
+        <LinearLayout
+            android:id="@+id/titleLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20px"
+            android:layout_marginTop="@dimen/margin_40px"
+            android:layout_toRightOf="@id/headImg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nickName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="天空"
+                android:textColor="@color/deviceNameTextColor"
+                android:textSize="@dimen/text_size_26" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:text="今天10：29"
+                android:textColor="@color/color_999"
+                android:textSize="@dimen/text_size_22" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/line"
+        layout="@layout/layout_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/mainRl"/>
+
+    <RelativeLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/line">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_20px"
+            android:layout_marginLeft="@dimen/margin_40px"
+            android:layout_marginRight="@dimen/margin_40px"
+            android:layout_marginTop="@dimen/margin_20px"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/lineSpacingExtra_12px"
+            android:maxLines="4"
+            android:text="五一小长假一家人去了华山，发点图片给大家看下吧，风景真的很不错哦，空气也很好，有时间的话可以去看看"
+            android:textColor="@color/deviceNameTextColor" />
+
+        <com.merise.net.heart.view.CustomGridView
+            android:id="@+id/gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content"
+            android:horizontalSpacing="@dimen/space_size"
+            android:paddingLeft="@dimen/margin_20px"
+            android:paddingRight="@dimen/margin_20px"
+            android:verticalSpacing="@dimen/space_size"></com.merise.net.heart.view.CustomGridView>
+
+        <LinearLayout
+            android:id="@+id/dosthLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gridView"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_20px">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_conversation_shape1"
+                android:gravity="center"
+                android:padding="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/dateTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="时间"
+                    android:textColor="@color/deviceNameTextColor" />
+
+                <TextView
+                    android:id="@+id/dateDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="sdfasdfs"
+                    android:textColor="@color/deviceNameTextColor" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_conversation_shape"
+                android:gravity="center"
+                android:padding="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/destinationTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="地点"
+                    android:textColor="@color/deviceNameTextColor" />
+
+                <TextView
+                    android:id="@+id/destinationDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="sdfasdfs"
+                    android:textColor="@color/deviceNameTextColor" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/detailRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dosthLl"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding_10">
+
+            <TextView
+                android:id="@+id/scanTimes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="浏览次数"
+                android:textColor="@color/deviceNameTextColor" />
+
+            <ImageButton
+                android:id="@+id/zan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_65px"
+                android:layout_toLeftOf="@+id/comment"
+                android:background="@android:color/transparent"
+                android:src="@drawable/zan" />
+
+            <ImageButton
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/send_btn" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dzNames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detailRl"
+            android:drawableLeft="@drawable/zan_show"
+            android:padding="@dimen/padding_10"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/commentContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dzNames"
+            android:layout_marginBottom="@dimen/margin_20"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_20px"></LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_20"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mainItemsBgColor"></TextView>
+</RelativeLayout>

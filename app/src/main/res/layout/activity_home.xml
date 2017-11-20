@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+
+
+    <com.merise.net.heart.view.CustomViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tip">
+    </com.merise.net.heart.view.CustomViewPager>
+
+    <include
+        android:id="@+id/tip"
+        layout="@layout/layout_horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@+id/tablayout" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="@dimen/min"
+        app:tabPadding="@dimen/tablayout_padding"
+        app:tabSelectedTextColor="@color/tabTextSelected"
+        app:tabTextAppearance="@style/TabLayoutTextStyle"
+        app:tabTextColor="@color/tabTextNormal">
+    </android.support.design.widget.TabLayout>
+</RelativeLayout>

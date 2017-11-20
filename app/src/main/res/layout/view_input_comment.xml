@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/input_comment_dialog_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/input_comment_dialog_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></ScrollView>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="#888888" />
+
+    <LinearLayout
+        android:id="@+id/input_comment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#efefef"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_10"
+        android:paddingLeft="@dimen/padding_5"
+        android:paddingRight="@dimen/padding_5"
+        android:paddingTop="@dimen/padding_10"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/input_comment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_35"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input_comment"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_5"
+            android:paddingRight="@dimen/padding_5"
+            android:hint="评论"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/btn_publish_comment"
+            android:layout_width="@dimen/swip_item_width_60dp"
+            android:layout_height="@dimen/height_35"
+            android:background="@drawable/bg_send_selector"
+            android:gravity="center"
+            android:text="发表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+</LinearLayout>

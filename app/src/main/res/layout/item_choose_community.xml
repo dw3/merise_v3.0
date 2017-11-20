@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_expand_item_height"
+    android:background="@drawable/item_click_bg_selector1"
+    android:button="@null"
+    android:checked="true"
+    android:drawableRight="@drawable/who_can_scan_selector"
+    android:paddingLeft="@dimen/padding_10"
+    android:paddingRight="@dimen/padding_10"
+    android:text="@string/for_everbody"
+    android:textColor="@drawable/textview_click_bg_selector" />
+

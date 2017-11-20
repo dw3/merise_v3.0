@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_20">
+
+        <TextView
+            android:id="@+id/import_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/new_password"
+            android:text="请输入6-16位密码，不能全为数字"
+            android:textSize="@dimen/text_size_22" />
+
+        <RelativeLayout
+            android:id="@+id/new_password"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/length_100px"
+            android:layout_below="@+id/import_hint"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/password_img1"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/new_password"
+                android:textColor="@color/deviceNameTextColor"
+                android:textSize="@dimen/text_size_26" />
+
+            <ImageView
+                android:id="@+id/pub_line2"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/password_img1"
+                android:src="@drawable/line" />
+
+            <com.merise.net.heart.view.ClearEditView
+                android:id="@+id/newPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@+id/pub_line2"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_new_password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/text_size_26" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/new_password"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_30">
+
+        <Button
+            android:id="@+id/change_code_finish"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wide_btn_bg_selector"
+            android:text="@string/finish"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

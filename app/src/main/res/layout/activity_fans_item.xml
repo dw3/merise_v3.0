@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mainItemsBgColor">
+
+    <RelativeLayout
+        android:id="@+id/whole_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/head_information_image"
+            android:layout_width="@dimen/length_50px"
+            android:layout_height="@dimen/length_50px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_20px"
+            android:layout_marginTop="@dimen/margin_20px"
+            android:src="@drawable/about_us" />
+
+        <TextView
+            android:id="@+id/nickName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_toRightOf="@+id/head_information_image"
+            android:text="金三胖"
+            android:textColor="@color/deviceNameTextColor"
+            android:textSize="@dimen/text_size_26" />
+
+        <TextView
+            android:id="@+id/mood_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nickName_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_toRightOf="@+id/head_information_image"
+            android:text="伟大领袖永远光荣正确"
+            android:textColor="@color/color_999"
+            android:textSize="@dimen/text_size_22" />
+
+        <ImageButton
+            android:id="@+id/is_fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:layout_marginRight="@dimen/margin_20px" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/margin_20px"
+        android:id="@+id/commonRepairRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:layout_below="@id/topTitle"
+        android:background="@drawable/item_click_bg_selector"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:gravity="center_vertical"
+            android:text="@string/common_repair"
+            android:textColor="@color/deviceNameTextColor" />
+
+        <TextView
+            android:id="@+id/commonRepairTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_20"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableRight="@drawable/next"
+            android:gravity="center_vertical"
+            android:textColor="@drawable/textview_click_bg_selector" />
+    </RelativeLayout>
+    <TextView
+        android:padding="@dimen/padding_10"
+        android:layout_below="@id/commonRepairRl"
+        android:id="@+id/commonRepairhint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/common_repair_hint"
+        android:textColor="@color/red" />
+    <RelativeLayout
+        android:layout_marginTop="@dimen/margin_20px"
+        android:id="@+id/personalRepairRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_expand_item_height"
+        android:layout_below="@id/commonRepairhint"
+        android:background="@drawable/item_click_bg_selector"
+        android:clickable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:gravity="center_vertical"
+            android:text="@string/personal_repair"
+            android:textColor="@color/deviceNameTextColor" />
+
+        <TextView
+            android:id="@+id/personalRepairTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_20"
+            android:clickable="true"
+            android:drawablePadding="@dimen/padding_10"
+            android:drawableRight="@drawable/next"
+            android:gravity="center_vertical"
+            android:textColor="@drawable/textview_click_bg_selector" />
+    </RelativeLayout>
+    <TextView
+        android:padding="@dimen/padding_10"
+        android:layout_below="@id/personalRepairRl"
+        android:id="@+id/personalRepairhint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/personal_repair_hint"
+        android:textColor="@color/red" />
+</RelativeLayout>

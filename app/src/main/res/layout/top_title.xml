@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bartop_bar"
+    android:orientation="vertical">
+<!--android:layout_marginTop="@dimen/activity_horizontal_margin"-->
+    <RelativeLayout
+        android:id="@+id/topRootRL"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/min"
+        android:paddingRight="@dimen/min">
+
+        <Button
+            android:id="@+id/back"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:drawableLeft="@drawable/back_bg_selector"
+            android:focusable="true"
+            android:paddingLeft="@dimen/title_text_padding_left"
+            android:textColor="@drawable/top_text_click_bg_selector"
+            android:textSize="@dimen/top_right_text_size" />
+
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/center_title_text_padding_left"
+            android:paddingRight="@dimen/center_title_text_padding_right"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size" />
+        <!--android:paddingRight="@dimen/title_text_padding_left"-->
+        <Button
+            android:id="@+id/right"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingRight="@dimen/title_text_padding_left"
+            android:textColor="@drawable/top_text_click_bg_selector"
+            android:textSize="@dimen/top_right_text_size" />
+
+        <!--<include-->
+            <!--layout="@layout/layout_horizontal_line"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="1px"-->
+            <!--android:layout_alignParentBottom="true" />-->
+    </RelativeLayout>
+</LinearLayout>

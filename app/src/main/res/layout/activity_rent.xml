@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainItemsBgColor">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:id="@+id/addImaFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topTitle">
+
+        <com.merise.net.heart.view.CustomGridView
+            android:id="@+id/gridView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_context"
+            android:horizontalSpacing="@dimen/space_size"
+            android:paddingLeft="@dimen/margin_20px"
+            android:paddingRight="@dimen/margin_20px"
+            android:verticalSpacing="@dimen/space_size" />
+
+        <ImageButton
+            android:id="@+id/imgBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/banner_image_height"
+            android:src="@drawable/photos" />
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/detailSV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/finishRL"
+        android:layout_below="@id/addImaFL"
+        android:layout_marginTop="@dimen/margin_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/roomTitleRL"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:layout_below="@id/topTitle"
+                android:layout_marginTop="@dimen/margin_2"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/room_title"
+                    android:textColor="@color/deviceNameTextColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+
+                <ImageView
+                    android:id="@+id/pub_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_toRightOf="@id/title"
+                    android:src="@drawable/line" />
+
+                <com.merise.net.heart.view.ClearEditView
+                    android:id="@+id/titleEd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toRightOf="@+id/pub_line"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/input_room_title"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/areaTL"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:layout_below="@id/roomTitleRL"
+                android:layout_marginTop="@dimen/margin_2"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/room_area"
+                    android:textColor="@color/deviceNameTextColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+
+                <ImageView
+                    android:id="@+id/pub_line1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_toRightOf="@id/area"
+                    android:src="@drawable/line" />
+
+                <com.merise.net.heart.view.ClearEditView
+                    android:id="@+id/areaEd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toRightOf="@+id/pub_line1"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/input_room_area"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/locationTL"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:layout_below="@id/roomTitleRL"
+                android:layout_marginTop="@dimen/margin_2"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/room_location"
+                    android:textColor="@color/deviceNameTextColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+
+                <ImageView
+                    android:id="@+id/pub_line2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_toRightOf="@id/location"
+                    android:src="@drawable/line" />
+
+                <com.merise.net.heart.view.ClearEditView
+                    android:id="@+id/locationEd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toRightOf="@+id/pub_line2"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/input_room_location"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/priceTL"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:layout_below="@id/roomTitleRL"
+                android:layout_marginTop="@dimen/margin_2"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/room_price"
+                    android:textColor="@color/deviceNameTextColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+
+                <ImageView
+                    android:id="@+id/pub_line3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_toRightOf="@id/price"
+                    android:src="@drawable/line" />
+
+                <com.merise.net.heart.view.ClearEditView
+                    android:id="@+id/priceEd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toLeftOf="@+id/unit"
+                    android:layout_toRightOf="@+id/pub_line3"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/input_room_price"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+
+                <TextView
+                    android:id="@+id/unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/yuan_per_month" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/mobileTL"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:layout_below="@id/roomTitleRL"
+                android:layout_marginTop="@dimen/margin_2"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/mobile"
+                    android:textColor="@color/deviceNameTextColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+
+                <ImageView
+                    android:id="@+id/pub_line4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:layout_toRightOf="@id/mobile"
+                    android:src="@drawable/line" />
+
+                <com.merise.net.heart.view.ClearEditView
+                    android:id="@+id/mobileEd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toRightOf="@+id/pub_line4"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/input_mobile"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/descriptionRL"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:layout_below="@id/roomTitleRL"
+                android:layout_marginTop="@dimen/margin_5"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10">
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/description"
+                    android:textColor="@color/deviceNameTextColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+
+                <ImageView
+                    android:id="@+id/pub_line5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_toRightOf="@id/description"
+                    android:src="@drawable/line" />
+
+                <com.merise.net.heart.view.ClearEditView
+                    android:id="@+id/descriptionEd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_toRightOf="@+id/pub_line5"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/input_description"
+                    android:singleLine="true"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/home_device_name_text_size" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/finishRL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding_20">
+
+        <Button
+            android:id="@+id/finish"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wide_btn_bg_selector"
+            android:text="@string/finish"
+            android:textColor="@drawable/top_text_click_bg_selector" />
+    </RelativeLayout>
+</RelativeLayout>

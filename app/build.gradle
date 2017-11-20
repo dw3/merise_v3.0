@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.merise.net.heart"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', 'proguard.cfg'
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile project(':common_library')
+    compile 'com.jakewharton:butterknife:8.0.1'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.android.support:design:23.4.0'
+    compile 'com.android.support:cardview-v7:23.4.0'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'org.loader:autohideime:1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    compile 'com.jakewharton:butterknife:8.0.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.afollestad.material-dialogs:commons:0.9.1.0'
+    compile 'me.iwf.photopicker:PhotoPicker:0.8.11@aar'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'com.trello:rxlifecycle:0.6.1'
+    compile 'com.trello:rxlifecycle-components:0.6.1'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+    compile 'com.zhy:autolayout:1.4.3'
+    compile files('libs/minacs.jar')
+    compile 'com.bigkoo:alertview:1.0.3'
+    compile 'jp.wasabeef:glide-transformations:2.0.0'
+    compile 'com.yanzhenjie:recyclerview-swipe:1.0.2'
+    compile files('libs/tbs_sdk_thirdapp_v2.3.0.1048_36801_sharewithdownload_obfs_20160829_200437.jar')
+    compile 'com.takwolf.android:lock9view:0.0.11'
+    compile 'com.bigkoo:pickerview:2.1.1'
+//    compile project(':xrecyclerview')
+    compile files('libs/hyphenatechat_3.2.1.jar')
+    compile 'com.jcodecraeer:xrecyclerview:1.3.2'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3'
+}

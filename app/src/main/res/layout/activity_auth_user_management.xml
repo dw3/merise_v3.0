@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/topTitle"
+            layout="@layout/top_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:id="@+id/usernameRl"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:layout_below="@id/topTitle"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@color/mainItemsBgColor"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_20"
+            android:paddingRight="@dimen/padding_20">
+
+            <TextView
+                android:id="@+id/usernameTv"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/username"
+                android:textColor="@color/deviceNameTextColor"
+                android:textSize="@dimen/home_device_name_text_size" />
+
+            <ImageView
+                android:id="@+id/username_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/usernameTv"
+                android:src="@drawable/line" />
+
+            <com.merise.net.heart.view.ClearEditView
+                android:id="@+id/usernameEd"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toRightOf="@+id/username_line"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_username"
+                android:singleLine="true"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/home_device_name_text_size"></com.merise.net.heart.view.ClearEditView>
+        </RelativeLayout>
+
+        <include
+            layout="@layout/layout_horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"></include>
+
+        <RelativeLayout
+            android:id="@+id/remarkRl"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:layout_below="@id/topTitle"
+            android:background="@color/mainItemsBgColor"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding_20"
+            android:paddingRight="@dimen/padding_20">
+
+            <TextView
+                android:id="@+id/nickName"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/remark"
+                android:textColor="@color/deviceNameTextColor"
+                android:textSize="@dimen/home_device_name_text_size"
+                android:layout_alignParentBottom="true" />
+
+            <ImageView
+                android:id="@+id/pub_line"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/nickName"
+                android:src="@drawable/line" />
+
+            <com.merise.net.heart.view.ClearEditView
+                android:id="@+id/remarkEd"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_toRightOf="@+id/pub_line"
+                android:background="@android:color/transparent"
+                android:hint="@string/input_remark"
+                android:singleLine="true"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/home_device_name_text_size"></com.merise.net.heart.view.ClearEditView>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:gravity="center"
+            android:text="@string/granting_authority"
+            android:textColor="@color/gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@drawable/pub_btn_normal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/door_per" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/open_door_right"
+                    android:textSize="@dimen/textview_text_size" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/opendoor_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/user_checkbox"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@drawable/pub_btn_normal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/history_record" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/historical_records"
+                    android:textSize="@dimen/textview_text_size" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/history_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/user_checkbox"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@drawable/pub_btn_normal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/bell_record_ic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/doorbell_hint"
+                    android:textSize="@dimen/textview_text_size" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/doorbell_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/user_checkbox"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@drawable/pub_btn_normal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/door_pro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/opendoor_hint"
+                    android:textSize="@dimen/textview_text_size" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/opendoor_tip_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/user_checkbox"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menci"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@drawable/pub_btn_normal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/alarm_record_ic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/door_alarm"
+                    android:textSize="@dimen/textview_text_size" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/magnetometer_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/user_checkbox"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/chaixie"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@drawable/pub_btn_normal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/teardown" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/disassembly_alarm"
+                    android:textSize="@dimen/textview_text_size" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/dismantle_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/user_checkbox"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dianliang"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_50"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_5"
+            android:background="@drawable/pub_btn_normal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:background="@drawable/electric" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/low_power_tips"
+                    android:textSize="@dimen/textview_text_size" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/battery_chk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_10"
+                android:background="@drawable/user_checkbox"
+                android:button="@null" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10"
+            android:text="@string/author_hint"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textview_text_size" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_30"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <Button
+                android:id="@+id/finish"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wide_btn_bg_selector"
+                android:text="@string/finish"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

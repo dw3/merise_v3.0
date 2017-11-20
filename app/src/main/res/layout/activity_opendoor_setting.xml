@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainItemsBgColor">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topTitle"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/openTypeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RadioButton
+                android:id="@+id/open_card"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:background="@drawable/item_click_bg_selector"
+                android:button="@null"
+                android:checked="true"
+                android:drawableRight="@drawable/checkbox_bg_selector"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:text="@string/opendoor_by_card"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <include
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"></include>
+
+            <RadioButton
+                android:id="@+id/open_fingerprint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:background="@drawable/item_click_bg_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_bg_selector"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:text="@string/opendoor_by_fingerprint"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <include
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"></include>
+
+            <RadioButton
+                android:id="@+id/open_card_fingerprint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:background="@drawable/item_click_bg_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_bg_selector"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:text="@string/opendoor_by_fingerprint_and_card"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <include
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"></include>
+
+            <RadioButton
+                android:id="@+id/open_card_or_fingerprint"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:background="@drawable/item_click_bg_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_bg_selector"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:text="@string/opendoor_by_fingerprint_or_card"
+                android:textColor="@drawable/textview_click_bg_selector" />
+
+            <include
+                layout="@layout/layout_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"></include>
+
+            <RadioButton
+                android:id="@+id/all_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_expand_item_height"
+                android:background="@drawable/item_click_bg_selector"
+                android:button="@null"
+                android:drawableRight="@drawable/checkbox_bg_selector"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:text="@string/forbid_all"
+                android:textColor="@drawable/textview_click_bg_selector" />
+        </RadioGroup>
+
+        <include
+            layout="@layout/layout_horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"></include>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_20"
+            android:layout_marginRight="@dimen/margin_20"
+            android:layout_marginTop="@dimen/wide_btn_margin_top">
+
+            <Button
+                android:id="@+id/finish"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/wide_btn_bg_selector"
+                android:text="@string/finish"
+                android:textColor="@drawable/top_text_click_bg_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

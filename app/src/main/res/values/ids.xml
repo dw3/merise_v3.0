@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="more" type="id" />
+    <item name="openDoor" type="id" />
+    <item name="videoReview" type="id" />
+    <item name="aKeyCall" type="id" />
+    <item name="fortifiedStatus" type="id" />
+    <item name="houseManage" type="id" />
+    <item name="setEmergencyNumbers" type="id" />
+    <item name="manageTips" type="id" />
+    <item name="openWay" type="id" />
+    <item name="viewRecord" type="id" />
+    <item name="fingerprintManage" type="id" />
+    <item name="doorCardManage" type="id" />
+    <item name="userManage" type="id" />
+    <item name="doorbellSet" type="id" />
+    <item name="timeSet" type="id" />
+    <item name="updateAccess" type="id" />
+    <item name="QRCode" type="id" />
+    <item name="sharkDoor" type="id" />
+</resources>

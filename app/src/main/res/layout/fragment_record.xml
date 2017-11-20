@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <com.merise.net.heart.view.PullToReFreshListView.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/record_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ptr:ptrDrawable="@drawable/default_ptr_rotate"
+        ptr:ptrAnimationStyle="rotate"></com.merise.net.heart.view.PullToReFreshListView.PullToRefreshListView>
+
+    <TextView
+        android:id="@+id/tv_no_record"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="没有记录"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/topTitle"
+        layout="@layout/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <LinearLayout
+        android:id="@+id/is_getstrue_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_click_bg_selector"
+            android:minHeight="@dimen/home_expand_item_height"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:text="@string/gesture_code"
+                android:textColor="@color/deviceNameTextColor" />
+
+            <CheckBox
+                android:id="@+id/cb_is_gesture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gesture_selector"
+                android:button="@android:color/transparent"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D3D3D3" />
+
+        <RelativeLayout
+            android:id="@+id/modifyGesturePwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/home_expand_item_height"
+            android:layout_below="@id/activityItem"
+            android:background="@drawable/item_click_bg_selector"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:gravity="center_vertical"
+                android:text="@string/modify_gesture_pwd"
+                android:textColor="@color/deviceNameTextColor" />
+
+            <TextView
+                android:id="@+id/canScanTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_20"
+                android:clickable="true"
+                android:drawablePadding="@dimen/padding_10"
+                android:drawableRight="@drawable/next"
+                android:gravity="center_vertical"
+                android:textColor="@drawable/textview_click_bg_selector" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

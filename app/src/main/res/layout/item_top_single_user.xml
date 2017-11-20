@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/forward"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/titleRL"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:background="@null"
+                android:drawableLeft="@drawable/back_bg_selector1" />
+
+            <TextView
+                android:id="@+id/followTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_20"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:textColor="@drawable/top_text_click_bg_selector" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/headImg"
+            android:layout_width="@dimen/length_280px"
+            android:layout_height="@dimen/length_280px"
+            android:layout_gravity="center"
+            android:background="@drawable/head_bg"
+            android:padding="@dimen/padding_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:enabled="false"
+                android:text="天天"
+                android:gravity="center"
+                android:padding="@dimen/padding_5"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/text_size_26" />
+
+            <ImageButton
+                android:id="@+id/modify_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/modify_m" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_5">
+
+            <TextView
+                android:id="@+id/follow_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="right"
+                android:text="关注:672"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_26" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="丨"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/fans_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="粉丝:672"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_26" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/feeling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:enabled="false"
+                android:gravity="center"
+                android:hint=""
+                android:padding="@dimen/padding_5"
+                android:text="这个人很懒，什么都没留下"
+                android:textColor="@color/white"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/text_size_26" />
+
+            <ImageButton
+                android:id="@+id/modify_feeling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/modify_m" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_35"
+        android:layout_below="@id/forward"
+        android:layout_centerVertical="true"
+        android:background="@color/mainItemsBgColor"
+        android:drawableLeft="@drawable/subject_bar"
+        android:drawablePadding="@dimen/padding_5"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_20"
+        android:text="他的动态"
+        android:textColor="@color/deviceNameTextColor"
+        android:textSize="@dimen/tablayout_text_size" />
+</RelativeLayout>

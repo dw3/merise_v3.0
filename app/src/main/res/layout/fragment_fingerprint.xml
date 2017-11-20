@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="@color/mainItemsBgColor">
+
+    <TextView
+        android:id="@+id/topTV"
+        android:background="@drawable/bartop_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"></TextView>
+    <ImageView
+        android:id="@+id/headImg"
+        android:layout_width="@dimen/length_200px"
+        android:layout_height="@dimen/length_200px"
+        android:layout_below="@id/topTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_20px"
+        android:background="@drawable/head_bg"
+        android:padding="@dimen/padding_10"
+        android:src="@drawable/home_ic" />
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_20px"
+        android:id="@+id/tipTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headImg"
+        android:gravity="center"
+        android:text="@string/input_fingerprint_pwd"
+        android:textColor="@color/deviceNameTextColor"
+        android:textSize="@dimen/text_size_26" />
+
+    <ImageView
+        android:layout_below="@id/tipTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/changeUnlockWay"
+        android:src="@drawable/finger" />
+
+
+    <Button
+        android:id="@+id/changeUnlockWay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:layout_marginBottom="@dimen/length_50px"
+        android:text="切换登录方式?"
+        android:textColor="@color/deviceNameTextColor" />
+</RelativeLayout>
